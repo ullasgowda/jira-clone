@@ -1,20 +1,22 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React, { Suspense } from "react";
+import { CssBaseline, StyledEngineProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
 
-import AppLayout from "./components/common/Layout/AppLayout";
+import LinearProgressLoader from "./components/common/loader/LinearProgress";
 
-import Dashboard from "./pages/Dashboard";
+import theme from "./theme";
+import Routes from "./routes";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <AppLayout>
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
-      </AppLayout>
-    </BrowserRouter>
+    <StyledEngineProvider injectFirst>
+      <CssBaseline />
+      <ThemeProvider theme={theme}>
+        <Suspense fallback={<LinearProgressLoader />}>
+          <Routes />
+        </Suspense>
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 };
 
