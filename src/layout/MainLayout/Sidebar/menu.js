@@ -1,4 +1,9 @@
-import { DashboardOutlined, AddTaskOutlined } from "@mui/icons-material";
+import {
+  DashboardOutlined,
+  SettingsOutlined,
+  NoteAltOutlined,
+  AssessmentOutlined,
+} from "@mui/icons-material";
 
 export const menu = [
   {
@@ -7,8 +12,18 @@ export const menu = [
     path: "/",
   },
   {
-    label: "Tasks",
-    icon: <AddTaskOutlined />,
-    path: "/tasks",
+    label: "Projects",
+    icon: <NoteAltOutlined />,
+    path: "/projects",
+  },
+  {
+    label: "Reports",
+    icon: <AssessmentOutlined />,
+    path: "/reports",
+  },
+  {
+    label: "Settings",
+    icon: <SettingsOutlined />,
+    path: "/settings",
   },
 ];

@@ -3,7 +3,9 @@ import { lazy } from "react";
 import MainLayout from "../layout/MainLayout";
 
 const Dashboard = lazy(() => import("../pages/Dashboard"));
-const Tasks = lazy(() => import("../pages/Tasks"));
+const Projects = lazy(() => import("../pages/Projects"));
+const Reports = lazy(() => import("../pages/Reports"));
+const Settings = lazy(() => import("../pages/Settings"));
 
 const MainRoutes = {
   path: "/",
@@ -18,8 +20,16 @@ const MainRoutes = {
       element: <Dashboard />,
     },
     {
-      path: "/tasks",
-      element: <Tasks />,
+      path: "/projects",
+      element: <Projects />,
+    },
+    {
+      path: "/reports",
+      element: <Reports />,
+    },
+    {
+      path: "/settings",
+      element: <Settings />,
     },
   ],
 };
