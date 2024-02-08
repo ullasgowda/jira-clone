@@ -3,22 +3,20 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      // Choose a color that is professional and not too bright
-      main: "#5c6bc0", // A shade of blue
-      light: "#8e99f3",
-      dark: "#26418f",
+      main: "#4F6F52",
+      light: "#728b74",
+      dark: "#3f5841",
       contrastText: "#fff",
     },
     secondary: {
-      // A contrasting color for buttons, highlights, etc
-      main: "#ff7043", // A shade of orange
-      light: "#ffa270",
-      dark: "#c63f17",
+      main: "#739072",
+      light: "#8fa68e",
+      dark: "#5c735b",
       contrastText: "#000",
     },
     background: {
-      default: "#f4f5f7", // A light grey for the background
-      paper: "#fff",
+      default: "#D2E3C8",
+      paper: "#E4EFE7",
     },
     // You can also define error, warning, info, success as needed
   },
@@ -26,7 +24,7 @@ const theme = createTheme({
     // Choose a professional, readable font
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
     fontSize: 14,
-    h1: { fontSize: "2.5rem" },
+    h1: { fontSize: "2.5rem", color: "#4F6F52" },
     h2: { fontSize: "2rem" },
     h3: { fontSize: "1.75rem" },
     // ... other typography settings

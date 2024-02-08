@@ -49,8 +49,8 @@ const Sidebar = ({ open }) => {
       }}
     >
       <DrawerHeader sx={{ justifyContent: "center", alignItems: "center" }}>
-        <Typography variant="body2" sx={{ ml: 1 }}>
-          app icon
+        <Typography variant="h1" sx={{ ml: 1 }}>
+          PPM
         </Typography>
       </DrawerHeader>
 

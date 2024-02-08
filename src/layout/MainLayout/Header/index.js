@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
+import { styled, useTheme } from "@mui/material/styles";
 import {
   AppBar as MuiAppBar,
   Toolbar,
@@ -25,14 +25,16 @@ const AppBar = styled(MuiAppBar, {
       duration: theme.transitions.duration.enteringScreen,
     }),
   }),
+  background: "white",
 }));
 
 const Header = ({ open, onDrawerOpen, onDrawerClose }) => {
+  const theme = useTheme();
   return (
     <AppBar position="fixed" open={open}>
       <Toolbar>
         <IconButton
-          color="inherit"
+          color={theme.palette.primary.dark}
           aria-label="open drawer"
           onClick={open ? onDrawerClose : onDrawerOpen}
           edge="start"
@@ -41,8 +43,11 @@ const Header = ({ open, onDrawerOpen, onDrawerClose }) => {
           {open ? <MenuOpenOutlined /> : <MenuOutlined />}
         </IconButton>
 
-        <Typography variant="h6" noWrap component="div">
-          App Name
+        <Typography variant="h6" noWrap component="div" color="primary">
+          Parrot{" "}
+          <Typography component="span" variant="caption" color="secondary">
+            Project Management
+          </Typography>
         </Typography>
       </Toolbar>
     </AppBar>
