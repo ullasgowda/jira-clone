@@ -3,6 +3,7 @@ import {
   SettingsOutlined,
   NoteAltOutlined,
   AssessmentOutlined,
+  GroupOutlined,
 } from "@mui/icons-material";
 
 export const menu = [
@@ -20,6 +21,11 @@ export const menu = [
     label: "Reports",
     icon: <AssessmentOutlined />,
     path: "/reports",
+  },
+  {
+    label: "Users",
+    icon: <GroupOutlined />,
+    path: "/users",
   },
   {
     label: "Settings",

@@ -16,7 +16,7 @@ const theme = createTheme({
     },
     background: {
       default: "#D2E3C8",
-      paper: "#E4EFE7",
+      paper: "#fff",
     },
     // You can also define error, warning, info, success as needed
   },
